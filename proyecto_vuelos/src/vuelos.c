@@ -7,7 +7,7 @@ void cargarVuelos(Vuelo *vuelos, int *cantidad) {
     FILE *file = NULL;
     
     // Intentar primero en data/
-    file = fopen("data/vuelos.txt", "r");
+    file = fopen("../data/vuelos.txt", "r");
     
     // Si no existe, intentar en el directorio actual
     if (!file) {
@@ -51,7 +51,7 @@ void guardarVuelos(Vuelo *vuelos, int cantidad) {
     FILE *file = NULL;
     
     // Intentar primero en data/
-    file = fopen("data/vuelos.txt", "w");
+    file = fopen("../data/vuelos.txt", "w");
     
     // Si no se puede, intentar en el directorio actual
     if (!file) {

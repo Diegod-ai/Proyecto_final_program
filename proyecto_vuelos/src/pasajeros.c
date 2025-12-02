@@ -8,7 +8,7 @@ void cargarPasajeros(Pasajero *lista, int *cant) {
     FILE *file = NULL;
     
     // Intentar primero en data/
-    file = fopen("data/pasajeros.txt", "r");
+    file = fopen("../data/pasajeros.txt", "r");
     
     // Si no existe, intentar en el directorio actual
     if (!file) {
@@ -51,7 +51,7 @@ void guardarPasajeros(Pasajero *lista, int cant) {
     FILE *file = NULL;
     
     // Intentar primero en data/
-    file = fopen("data/pasajeros.txt", "w");
+    file = fopen("../data/pasajeros.txt", "w");
     
     // Si no se puede, intentar en el directorio actual
     if (!file) {
