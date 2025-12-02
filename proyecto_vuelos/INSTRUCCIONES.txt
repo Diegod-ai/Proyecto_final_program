@@ -199,5 +199,5 @@ CONTACTO
 ========================================
 
 Para dudas o consultas sobre el proyecto:
-[Tu email]
-[Tu nombre]
+[d.aristizabal2@utp.edu.co]
+[Diego Alexander Aristizabal Salazar]
