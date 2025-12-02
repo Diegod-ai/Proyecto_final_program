@@ -1,0 +1,26 @@
+450,Bogota,Medellin,HK-5234,Carlos Mendoza,08:30,15/12/2024,0
+501,Medellin,Cartagena,HK-4567,Ana Rodriguez,10:15,15/12/2024,0
+502,Cali,Bogota,HK-7890,Roberto Silva,14:00,15/12/2024,0
+503,Barranquilla,San Andres,HK-3421,Patricia Gomez,06:45,16/12/2024,0
+504,Pereira,Bogota,HK-6789,Luis Martinez,12:30,16/12/2024,0
+505,Cartagena,Bogota,HK-2345,Maria Torres,16:20,16/12/2024,0
+506,Bogota,Santa Marta,HK-8901,Diego Ramirez,09:00,17/12/2024,0
+507,Medellin,Bucaramanga,HK-5678,Sandra Lopez,11:45,17/12/2024,0
+508,Cali,Cartagena,HK-4321,Fernando Diaz,15:30,17/12/2024,0
+509,Bogota,Cali,HK-9012,Claudia Perez,07:15,18/12/2024,0
+510,San Andres,Bogota,HK-1234,Jorge Herrera,13:00,18/12/2024,0
+511,Bucaramanga,Medellin,HK-5555,Luz Angel,17:45,18/12/2024,0
+512,Bogota,Barranquilla,HK-6666,Miguel Castro,08:00,19/12/2024,0
+513,Medellin,Pereira,HK-7777,Andrea Sanchez,10:30,19/12/2024,0
+514,Cartagena,Medellin,HK-8888,Ricardo Vega,14:15,19/12/2024,0
+515,Bogota,Miami,HK-9999,Sofia Ruiz,22:00,20/12/2024,0
+516,Medellin,Ciudad de Mexico,HK-1111,Pablo Morales,23:30,20/12/2024,0
+517,Bogota,Lima,HK-2222,Carolina Ortiz,05:00,21/12/2024,0
+518,Cali,Quito,HK-3333,Andres Vargas,07:30,21/12/2024,0
+519,Bogota,Panama,HK-4444,Daniela Cruz,19:00,21/12/2024,0
+400,Bogota,Medellin,HK-1122,Juan Garcia,09:00,10/12/2024,1
+401,Cali,Bogota,HK-3344,Pedro Jimenez,11:30,10/12/2024,1
+402,Cartagena,Bogota,HK-5566,Laura Fernandez,15:00,11/12/2024,1
+403,Medellin,Barranquilla,HK-7788,Camilo Reyes,08:15,12/12/2024,1
+404,Bogota,San Andres,HK-9900,Valentina Rojas,12:00,13/12/2024,1
+520,Bogota,Manizales,HK-1515,Diego,12:22,01/12/2025,0

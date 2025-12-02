@@ -1,0 +1,203 @@
+========================================
+PROYECTO: SISTEMA DE GESTIÓN DE VUELOS
+========================================
+
+AUTOR: [Diego Alexander Aristizabal Salazar]
+FECHA: Diciembre 2024
+
+ESTRUCTURA DEL PROYECTO:
+------------------------
+Proyecto_Vuelos/
+├── src/                  (código fuente)
+│   ├── main.c           (programa principal y menú)
+│   ├── vuelos.c         (implementación gestión vuelos)
+│   ├── vuelos.h         (cabeceras vuelos)
+│   ├── pasajeros.c      (implementación gestión pasajeros)
+│   └── pasajeros.h      (cabeceras pasajeros)
+├── data/                 (archivos de datos)
+│   ├── vuelos.txt       (base de datos de vuelos)
+│   └── pasajeros.txt    (base de datos de pasajeros)
+├── bin/                  (se crea al compilar)
+│   └── programa(.exe)   (ejecutable compilado)
+├── compilar.sh          (script compilación Linux/Mac)
+├── compilar.bat         (script compilación Windows)
+└── INSTRUCCIONES.txt    (este archivo)
+
+========================================
+COMPILACIÓN Y EJECUCIÓN
+========================================
+
+=== OPCIÓN 1: CON SCRIPTS (RECOMENDADO) ===
+
+Linux/Mac:
+  1. Abrir terminal en esta carpeta
+  2. chmod +x compilar.sh
+  3. ./compilar.sh
+  4. ./bin/programa
+
+Windows:
+  1. Doble clic en compilar.bat
+  2. Ejecutar: bin\programa.exe
+     (o doble clic en bin\programa.exe)
+
+=== OPCIÓN 2: COMPILACIÓN MANUAL ===
+
+1. Abrir terminal/cmd en la carpeta raíz del proyecto
+
+2. Compilar:
+   gcc -o bin/programa src/main.c src/vuelos.c src/pasajeros.c
+
+   Windows:
+   gcc -o bin\programa.exe src\main.c src\vuelos.c src\pasajeros.c
+
+3. Ejecutar:
+   ./bin/programa        (Linux/Mac)
+   bin\programa.exe      (Windows)
+
+⚠️ IMPORTANTE: 
+- Siempre ejecutar desde la carpeta RAÍZ del proyecto
+- NO ejecutar desde dentro de src/ o bin/
+- Los archivos .txt deben estar en data/
+
+========================================
+FUNCIONALIDADES DEL SISTEMA
+========================================
+
+El sistema ofrece las siguientes opciones:
+
+1.  Cargar información desde archivos
+    - Carga vuelos.txt y pasajeros.txt desde data/
+    
+2.  Adicionar vuelo
+    - Permite agregar un nuevo vuelo
+    - Valida que no existan números de vuelo duplicados
+    
+3.  Adicionar pasajero
+    - Permite agregar un nuevo pasajero
+    - Valida que el vuelo exista
+    - Valida que no se agreguen pasajeros a vuelos realizados
+    - Valida que no existan cédulas duplicadas
+    
+4.  Listar pasajeros de un vuelo
+    - Muestra todos los pasajeros de un vuelo específico
+    - Indica su estado (Reservado o A bordo)
+    
+5.  Listar vuelos programados
+    - Muestra todos los vuelos con estado "programado"
+    
+6.  Listar vuelos realizados
+    - Muestra todos los vuelos con estado "realizado"
+    
+7.  Buscar vuelos por cédula del pasajero
+    - Busca un pasajero por cédula
+    - Muestra información del vuelo asignado
+    
+8.  Marcar vuelo como realizado
+    - Cambia el estado de un vuelo de programado a realizado
+    
+9.  Registrar pasajero a bordo
+    - Cambia el estado de un pasajero de "reservado" a "a bordo"
+    
+10. Guardar y salir
+    - Guarda todos los cambios en los archivos .txt
+    - Cierra el programa
+
+========================================
+FORMATO DE ARCHIVOS DE DATOS
+========================================
+
+vuelos.txt:
+-----------
+Formato: nroVuelo,origen,destino,matricula,piloto,hora,fecha,estado
+
+Ejemplo:
+450,Bogota,Medellin,HK-5234,Carlos Mendoza,08:30,15/12/2024,0
+
+Estados:
+- 0 = Programado
+- 1 = Realizado
+
+pasajeros.txt:
+--------------
+Formato: cedula,nombre,telefono,estado,nroVuelo
+
+Ejemplo:
+1001,Juan Pérez,3105551111,1,501
+
+Estados:
+- 1 = Reservado
+- 2 = A bordo
+
+========================================
+CARACTERÍSTICAS TÉCNICAS
+========================================
+
+Lenguaje: C (C99)
+Compilador: GCC
+Límites:
+- Máximo 100 vuelos
+- Máximo 200 pasajeros
+
+Validaciones implementadas:
+- No permite números de vuelo duplicados
+- No permite cédulas de pasajero duplicadas
+- Valida que el vuelo exista al agregar pasajero
+- No permite agregar pasajeros a vuelos realizados
+- Verifica formato de archivos al cargar
+
+Persistencia:
+- Los datos se guardan automáticamente al seleccionar "Guardar y salir"
+- Si no se usa la opción de guardar, los cambios se pierden
+
+========================================
+SOLUCIÓN DE PROBLEMAS
+========================================
+
+Problema: "No se encuentra archivo vuelos.txt"
+Solución: 
+- Verificar que existe la carpeta data/
+- Verificar que vuelos.txt está dentro de data/
+- Ejecutar desde la raíz del proyecto
+
+Problema: "No se pueden guardar los datos"
+Solución:
+- Verificar permisos de escritura en data/
+- En Linux/Mac: chmod 755 data/
+
+Problema: "gcc no reconocido" (Windows)
+Solución:
+- Instalar MinGW-w64 o TDM-GCC
+- Agregar GCC al PATH del sistema
+
+Problema: "Permission denied" (Linux/Mac)
+Solución:
+- chmod +x compilar.sh
+- chmod +x bin/programa
+
+Problema: "Warnings al compilar"
+Solución:
+- Los warnings son normales y no impiden la ejecución
+- Para compilar sin warnings: agregar flags específicos
+
+========================================
+NOTAS ADICIONALES
+========================================
+
+- El código está modularizado en archivos separados para mejor
+  organización y mantenibilidad
+  
+- Se incluyen validaciones robustas para evitar errores de datos
+
+- Los archivos .txt utilizan codificación UTF-8
+
+- El sistema es multiplataforma (Windows, Linux, Mac)
+
+- Se recomienda hacer backup de data/ periódicamente
+
+========================================
+CONTACTO
+========================================
+
+Para dudas o consultas sobre el proyecto:
+[Tu email]
+[Tu nombre]
